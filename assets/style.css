@@ -8,6 +8,7 @@ body {
   background: #111;
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
@@ -138,18 +139,45 @@ body {
 }
 .small-title {
   color: white;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   margin: 0 0 1rem 0;
 }
 
+.right-menu {
+  z-index: 1;
+  position: absolute;
+  right: 35px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mute-button {
+  opacity: 0.6;
+  cursor: pointer;
+  display: block;
+  width: 39px;
+  height: 39px;
+  background-image: url('mute.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.mute-button:hover {
+  opacity: 1;
+  background-image: url('unmute.png');
+}
+.mute-button.unmuted {
+  background-image: url('unmute.png');
+}
+.mute-button.unmuted:hover {
+  opacity: 1;
+  background-image: url('mute.png');
+}
 .icon-container .icon {
   margin: 0 0.5rem;
 }
 
 .sm-links {
-  z-index: 1;
-  position: absolute;
-  right: 25px;
   display: flex;
   flex-direction: column;
 }
@@ -161,6 +189,10 @@ body {
 .sm-links .icon:hover {
   opacity: 1;
   transform: translateX(-6px);
+}
+
+.sm-links-mobile {
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -207,6 +239,19 @@ body {
     display: none;
   }
 
+  .sm-links-mobile {
+    display: block;
+    opacity: 0.8;
+    margin-top: 1rem;
+  }
+  .sm-links-mobile p {
+    color: white;
+    text-align: center;
+  }
+  .sm-links-mobile a {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
   @media (max-width: 400px) {
     .title-container {
       font-size: 0.5rem;
