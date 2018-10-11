@@ -235,6 +235,15 @@ body {
   .small-title {
     text-align: center;
   }
+  .mute-button {
+    display: none;
+  }
+  .dummy {
+    display: none;
+  }
+  .right-menu {
+    justify-content: center;
+  }
   .sm-links {
     display: none;
   }
@@ -243,6 +252,15 @@ body {
     display: block;
     opacity: 0.8;
     margin-top: 1rem;
+  }
+  @media (orientation: landscape) and (max-width: 800px) {
+    .sm-links {
+      display: flex;
+      opacity: 0.8;
+    }
+    .sm-links-mobile {
+      display: none;
+    }
   }
   .sm-links-mobile p {
     color: white;
