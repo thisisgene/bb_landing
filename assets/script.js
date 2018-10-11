@@ -1,3 +1,8 @@
+window.onload = function() {
+  console.log('loaded')
+  document.getElementById('black-overlay').classList = 'black-overlay loaded'
+}
+
 const toggleMute = () => {
   const video = document.getElementById('video')
   const muteButton = document.getElementById('mute-button')

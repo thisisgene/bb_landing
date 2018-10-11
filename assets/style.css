@@ -13,6 +13,29 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
 }
+
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background: black;
+  transition: opacity 500ms ease-in-out;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.black-overlay img {
+  width: 50px;
+  opacity: 0.5;
+}
+.black-overlay.loaded {
+  opacity: 0;
+}
+
 .mobile-background {
   display: none;
 }
@@ -95,7 +118,8 @@ body {
   line-height: 1;
   font-size: 6rem;
   text-align: center;
-  animation: 4000ms fade infinite ease-in-out;
+  animation: 4000ms fade infinite 3000ms ease-in-out;
+  opacity: 0;
 }
 
 @keyframes fade {
